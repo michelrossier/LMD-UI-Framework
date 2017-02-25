@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+
+:root {
+
+  /*Version with Blue Color*/
+  --very-light-blue: #A9DDEA;
+  --soft-light-blue: #69D0EE;
+  --light-blue: #57AEC7;
+  --very-light-gray: #D4D4D4;
+  --light-gray: #BDBDBD;
+  --gray: #D1D0D0;
+  --dark-gray: #31353B;
+  --title-color: #fff;
+  --content-color: #000;
+
+  /*Version with Red Color*/
+
+  /*TODO*/
+
+  /*Font used in the Framework*/
+  --font-heading: 'Roboto';
+  --font-content: 'Open Sans';
+  --font-title: sans-serif;
+}
+
+* {
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.sn-split {
+  margin: 25px 0;
+  height: 10px;
+}
+
+input {
+  cursor: pointer;
+}
+
+/***********************/
+/****FORMS SETUP********/
+/**********************/
+
+/*With fixed Size : width: 346px  */
+.sn-form-signup {
+  border: 2px solid var(--very-light-blue);
+  border-radius: 5px;
+  padding: 20px 35px;
+  width: 346px;
+}
+
+/*CSS for fluid Layout*/
+.sn-form-signup-fluid {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+}
+
+.sn-form-signup .sn-form-signup-title {
+  color: var(--soft-light-blue);
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 15px 0 25px 0;
+}
+
+.sn-form-signup-form {
+  position: relative;
+}
+
+
+/************************************/
+/****INPUT FIELDS SETUP********/
+/***********************************/
+
+.sn-form-signup-form  label[for*="sig"] > .fa{
+  border-radius: 5px 0 0 5px;
+  color: var(--title-color);
+  position: absolute;
+  margin-top: 21px;
+  margin-left: 0;
+  background: var(--soft-light-blue);
+  padding: 11px 16px;
+}
+
+.fa-envelope {
+  padding-left: 13px;
+}
+
+
+
+.sn-form-signup-form > input {
+  border: 1px solid var(--soft-light-blue);
+  border-radius: 5px 0 0 5px;
+  color: var(--light-gray);
+  width: 100%;
+  padding: 10px 20px 10px 55px;
+  margin: 20px 0;
+}
+
+.sn-form-signup-form > label:last-of-type {
+  margin-bottom: 60px;
+}
+
+.sn-form-signup-form > label {
+  display: block;
+}
+
+/************************************/
+/****RADIO AND CHECKBOX SETUP********/
+/***********************************/
+
+label.lblradio {
+  color: var(--light-blue);
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  height: 1px;
+  padding: 0;
+  opacity: 0;
+  width: 1px;
+}
+
+label .outer {
+  height: 20px;
+  width: 20px;
+  display: block;
+  float: left;
+  margin: 10px 9px 10px 10px;
+  border: 1px solid var(--light-blue);
+  border-radius: 50%;
+  background-color: var(--title-color);
+  transition: all 900ms;
+}
+
+input[type="radio"]:checked + .outer {
+  background: var(--very-light-blue);
+  box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+}
+
+input[type="checkbox"] {
+  height: 1px;
+  padding: 0;
+  opacity: 0;
+  width: 1px;
+}
+
+input[type="checkbox"] + label {
+  color: var(--light-blue);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+input[type="checkbox"] + label:before {
+  content: "////";
+  margin-right: 18px;
+  font-size: 17px;
+  font-family: 'FontAwesome';
+  min-width: 20px;
+  min-height: 20px;
+  border: 1px solid var(--very-light-blue);
+  color: transparent;
+  margin-left: 9px;
+  transition: all 500ms;
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  color: var(--very-light-blue);
+}
+
+/* Button Setup*/
+.sn-button {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 13px 20px;
+  font-weight: bold;
+  transition: background 500ms, color 300ms;
+}
+
+.sn-button-large {
+  display: block;
+  width: 100%;
+}
+
+.sn-button-hover:hover {
+  color: var(--title-color);
+  background: var(--soft-light-blue);
+
+}
+
+.sn-button-primary {
+  color: var(--soft-light-blue);
+  background: var(--title-color);
+  border: 2px solid var(--soft-light-blue);
+}
+
+.sn-button-gray {
+  color: var(--light-gray);
+  background: var(--title-color);
+  border: 2px solid var(--light-gray);
+}
+
+.sn-button-gray-hover:hover {
+  color: var(--title-color);
+  background: var(--very-light-gray);
+}
+
+/*****************   CONTACT FORM         ************************************/
+
+/*With fixed Size : width: 346px  */
+.sn-form-submit {
+  background: var(--light-blue);
+  border: 2px solid var(--very-light-blue);
+  border-radius: 5px;
+  padding: 20px 35px;
+  width: 346px;
+}
+
+/*CSS for fluid Layout*/
+.sn-form-submit-fluid {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+}
+
+.sn-form-submit .sn-form-submit-title {
+  color: var(--title-color);
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 30px 0 70px 0;
+}
+
+.sn-form-submit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sn-form-submit-inp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+/************** INPUT AREA*********/
+
+.sn-form-submit-inp-container {
+  position: relative;
+  width: 100%;
+}
+
+.sn-form-submit-inp-container:first-child {
+  margin-right: 20px;
+}
+
+input[id*="sub"],
+textarea {
+  color: var(--light-gray);
+  margin: 30px 0;
+  position: relative;
+  padding: 10px 20px 10px 10px;
+  width: 100%;
+}
+
+input[id*="sub"]:first-child {
+  margin-right: 15px;
+}
+
+label[for*="sub"] {
+  position: absolute;
+  top: 5px;
+  color: var(--title-color);
+}
+
+/*********** MEDIA QUERIES  **************************/
+
+@media screen and (max-width: 621px) {
+  .sn-form-submit-inp {
+    flex-direction: column;
+  }
+}
+
+
