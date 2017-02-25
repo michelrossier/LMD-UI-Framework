@@ -1,0 +1,165 @@
+/* @TODO -- Move all of this to a main.css and import it into the component CSS*/
+
+/*@TODO -- decide if you will keep the reset*/
+/*@import url("/src/styles/css/reset.css");*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+
+:root {
+
+  /*Version with Blue Color*/
+  --very-light-blue: #A9DDEA;
+  --soft-light-blue: #69D0EE;
+  --light-blue: #57AEC7;
+  --very-light-gray: #D4D4D4;
+  --light-gray: #BDBDBD;
+  --gray: #D1D0D0;
+  --dark-gray: #31353B;
+  --title-color: #fff;
+  --content-color: #000;
+
+
+  /*Font used in the Framework*/
+  --font-heading: 'Roboto';
+  --font-content: 'Open Sans';
+  --font-title: sans-serif;
+}
+
+/*@TODO : add these root styles: */
+:root {
+  --button-hover: rgb(63, 198, 237);
+  --button-active: rgb(50, 158, 190);
+  --button-font-light: rgb(251, 255, 255);
+  --button-disabled: rgb(175,175,175);
+}
+
+* {
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* END @TODO */
+
+
+.cfa-section__buttons li {
+  list-style-type: none;
+  margin: 0 1%;
+}
+
+/******* container for the component elements *******/
+
+.cfa-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/****** Basic button styles ******/
+.cfa-button {
+  border-radius: 3px;
+  border-style: solid;
+  font-weight: 700;
+  font-family: var(--font-content);
+  color: var(--soft-light-blue);
+  background-color: Transparent;
+  border: 1px solid var(--soft-light-blue);
+  outline: none;
+  padding: 8px 22px;
+  min-width: 103px;
+}
+
+.cfa-button:hover {
+  background-color: var(--button-hover);
+  color: var(--button-font-light);
+  border-color: var(--button-hover);
+
+}
+
+.cfa-button:active {
+  background-color: var(--button-active);
+  border-color: var(--button-active);
+}
+
+
+.cfa-button:disabled, .cfa-button--disabled {
+  background-color: var(--button-disabled);
+  border-color: var(--button-disabled);
+  color: var(--button-font-light);
+}
+
+i.fa {
+  padding-right: 10px;
+}
+
+
+/****** Rounded button styles *****/
+.cfa-button--rounded {
+  border-radius: 20px;
+}
+
+/****** Button Groups *******/
+
+ul.cfa-container--grouped>div>li {
+  margin: 0;
+}
+
+ul.cfa-container--grouped>div {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 20px;
+}
+
+.cfa-container__rounded-group li:first-child>button {
+  border-radius: 20px 0 0 20px;
+}
+
+.cfa-container__rounded-group li:last-child>button {
+  border-radius: 0 20px 20px 0;
+}
+
+
+
+
+
+
+
+
+/*
+
+.button {
+    display: inline-block;
+    position:relative;
+    padding: 5px 10px 6px;
+    background-color: rgba(166,166,166,0.8);
+    line-height: 1;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(135, 135, 135, 0.9);
+}
+
+.button:active {
+    top: 1px;
+}
+
+.button-sm {
+    font-size: 12px;
+}
+
+.button-md {
+    font-size: 16px;
+    padding: 7px 13px 7px;
+
+}
+
+.button-lg {
+    font-size: 24px;
+    padding: 8px 14px 9px;
+}*/
