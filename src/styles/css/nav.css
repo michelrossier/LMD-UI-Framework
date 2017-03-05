@@ -18,10 +18,12 @@ nav ul {
 
 nav li {
   font-size: 1.2em;
+  font-weight: 900;
   margin: .2em 0;
   padding: .5em;
   padding-right: 2em;
   transition: all 200ms;
+  border-right: 4px solid transparent; 
 }
 
 nav li:hover {
@@ -35,7 +37,13 @@ nav li:first-child {
 
 /* For devices smaller than 550px */
 @media (max-width: 550px) {
+
   nav li:hover {
+    border: none;
+    border-bottom: 4px solid var(--primary-color);
+  }
+
+  nav li:first-child {
     border: none;
   }
 
